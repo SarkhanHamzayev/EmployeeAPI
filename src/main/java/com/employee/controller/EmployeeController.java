@@ -23,7 +23,7 @@ public class EmployeeController{
     }
 
 
-    @RequestMapping(value = "/list",method = RequestMethod.POST)
+    @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<Employee> getEmployeeList()throws Exception {
         return employeeService.getEmployeeList();
     }

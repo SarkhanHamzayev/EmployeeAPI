@@ -19,10 +19,10 @@ public class EmployeeDAO {
 
 
     public List<Employee> getEmployeeList() {
-        return jdbcTemplate.query("select * from employee" , new MailRowMapper() );
+        return jdbcTemplate.query("select * from employee" , new EmployeeRowMapper() );
 
     }
-    class MailRowMapper implements RowMapper< Employee > {
+    class EmployeeRowMapper implements RowMapper< Employee > {
         @Override
         public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
             Employee employee =new Employee();

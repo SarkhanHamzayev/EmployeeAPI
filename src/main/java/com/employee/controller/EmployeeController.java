@@ -17,11 +17,6 @@ public class EmployeeController{
     @Autowired
     EmployeeService employeeService;
 
-    @RequestMapping(value = "/qqq", method = RequestMethod.GET)
-    public String testA(){
-        return "Sarkhan Hamzayev";
-    }
-
 
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<Employee> getEmployeeList()throws Exception {
